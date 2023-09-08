@@ -1,7 +1,12 @@
-<%= @facade.member_count %> Members
-<% @facade.fire_nation.each do |member| %>
-  <%= member.name %>
-<%end%>
+The Fire Nation has <%= @facade.member_count %> Members
+
+<p>Details</p>
+<div>
+  <% @facade.fire_nation.each do |member| %>
+    <%= member.name %>:  <%= member.photo%></br>
+    Enemies: <%= member.enemies.join(', ') %></br></br>
+  <%end%>
+</div>
+
 <%= "list of allies or 'None'" %>
-<%= "list of enemies or 'None'" %>
 <%= "any affiliations this member has" %>
