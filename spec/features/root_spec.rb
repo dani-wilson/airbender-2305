@@ -10,5 +10,10 @@ RSpec.describe "the root page" do
     click_button "Search For Members"
 
     expect(current_path).to eq("/search")
+
+    expect(page).to have_content("20 Members")
+    expect(page).to have_content("Azula")
+    # expect(page).to have_content("Ozai")
+    # expect(page).to have_content("Zuko")
   end
 end
