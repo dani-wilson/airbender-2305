@@ -13,7 +13,7 @@ RSpec.describe "the root page" do
 
     expect(page).to have_content("20 Members")
     expect(page).to have_content("Azula")
-    # expect(page).to have_content("Ozai")
-    # expect(page).to have_content("Zuko")
+    save_and_open_page
+    expect(page).to have_content("Iroh, Zuko")
   end
 end
